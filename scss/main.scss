@@ -1,0 +1,23 @@
+// Reset
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// Importar google fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+
+//variables
+
+$bgClaro:#FDFAF7;
+$colorCafe:#B39359;
+$colorVerde:#8C8A65;
+$colorVerdeoscuro:#8C8A65;
+$titulosFont: "Outfit", sans-serif;
+$cuerpoFont: "Inter", sans-serif;
+
+
+body{
+    font-family: $cuerpoFont;
+}
