@@ -1,40 +1,193 @@
 // Reset
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 // Importar google fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Vidaloka&display=swap');
+// iconos boostrap
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 //variables
+// colores
+$bgClaro: #FDFAF7;
+$colorCafe: #B39359;
+$colorVerde: #8C8A65;
+$colorVerdeoscuro: #35362B;
 
-$bgClaro:#FDFAF7;
-$colorCafe:#B39359;
-$colorVerde:#8C8A65;
-$colorVerdeoscuro:#8C8A65;
+//tipografías
 $titulosFont: "Outfit", sans-serif;
+$titulosSerif: "Vidaloka", serif;
 $cuerpoFont: "Inter", sans-serif;
 
+//Tamaños fonts
+$tamanoTitulo: 3.3rem;
+$tamanoSubtitulo: 2.4rem;
+$tamanoh3: 1.4rem;
+$tamanoGeneral: 1rem;
+$tamanoSmall: 0.9rem;
 
-body{
-    font-family: $cuerpoFont;
+// Extend
+
+%boton-estructura {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
 }
 
-.contenedor{
+//mixin
+
+@mixin botones($bgColor, $txtColor){
+    background: $bgColor;
+    color: $txtColor;
+}
+
+
+body {
+    font-family: $cuerpoFont;
+    font-size: 62.5%;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: $tamanoTitulo;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: $tamanoSubtitulo;
+}
+
+p,
+li,
+a {
+    font-size: $tamanoGeneral;
+}
+
+.contenedor {
     max-width: 1280px;
     margin: 0 auto;
+    position: relative;
 }
 
-a.navbar-brand{
-    display: block;
-    position: relative;
-    img{
-        max-width: 215px;
+
+header {
+
+    a.navbar-brand {
+        display: block;
+        position: relative;
+
+        img {
+            max-width: 215px;
+        }
+
+        span {
+            position: absolute;
+            text-indent: -9999px;
+        }
+
     }
-    span{
-        position: absolute;
-        text-indent: -9999px;
+
+    .navbar-nav{
+         a{
+            text-decoration: none;
+            color:$colorVerde;
+            padding: 0 15px;
+            font-weight: 500;
+            font-family: $titulosFont;
+
+            &:hover{
+                color: $colorVerdeoscuro;
+            }
+
+        }
+
+        .active{
+                color: $colorVerdeoscuro;
+        }
+    }
+}
+
+footer {
+    background-color: $colorVerdeoscuro;
+    padding: 40px 0 0;
+
+    img {
+        max-height: 80px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $colorVerde;
+        font-size: $tamanoSmall;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        color: $colorCafe;
+        text-align: left;
+        font-size: $tamanoh3;
+        font-family: $titulosFont;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        li{
+            list-style-type: none;
+        }
+    }
+
+    a {
+        color: $colorVerde;
+        text-decoration: none;
+        font-size: $tamanoSmall;
+    }
+
+    .social {
+
+        i {
+            height: 30px;
+        }
+    }
+
+    .pie {
+        padding: 15px 0;
+        margin-top: 40px;
+        text-align: center;
+        background: $colorVerde;
+
+        p {
+            color: $colorVerdeoscuro;
+            font-size: $tamanoSmall;
+            font-weight: 500;
+        }
+    }
+}
+
+section.hero-slide{
+    background: $bgClaro;
+}
+
+.textoSlide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 35%;
+    h2{
+        font-family: $titulosSerif;
+        font-size: $tamanoTitulo;
+    }
+    button{
+        font-size: $tamanoGeneral;
+        @extend %boton-estructura;
+        @include botones($colorCafe, $bgClaro);
     }
 }
