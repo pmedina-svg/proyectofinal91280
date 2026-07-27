@@ -26,3 +26,15 @@ body{
     max-width: 1280px;
     margin: 0 auto;
 }
+
+a.navbar-brand{
+    display: block;
+    position: relative;
+    img{
+        max-width: 215px;
+    }
+    span{
+        position: absolute;
+        text-indent: -9999px;
+    }
+}
