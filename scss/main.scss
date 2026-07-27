@@ -21,3 +21,8 @@ $cuerpoFont: "Inter", sans-serif;
 body{
     font-family: $cuerpoFont;
 }
+
+.contenedor{
+    max-width: 1280px;
+    margin: 0 auto;
+}
