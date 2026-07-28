@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.textoSlide button {
+section.productos button, .textoSlide button {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -128,11 +128,55 @@ section.hero-slide {
 .textoSlide h2 {
   font-family: "Vidaloka", serif;
   font-size: 3.3rem;
+  color: #35362B;
 }
 .textoSlide button {
   font-size: 1rem;
   background: #B39359;
   color: #FDFAF7;
+}
+
+.carousel-item .contenedor:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: stretch;
+  background: #FDFAF7;
+  background: linear-gradient(270deg, rgb(253, 250, 247) 0%, rgba(255, 255, 255, 0) 100%);
+  right: 0px;
+  top: 0;
+}
+
+section.productos {
+  padding: 40px 0px;
+  text-align: center;
+}
+section.productos h3 {
+  font-size: "Outfit", sans-serif;
+  font-weight: bolder;
+  color: #35362B;
+  margin-bottom: 15px;
+}
+section.productos button {
+  font-size: 1rem;
+  background: #B39359;
+  color: #FDFAF7;
+}
+
+.columnas-productos {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.columnas-productos .col {
+  max-width: 25%;
+}
+.columnas-productos .col img {
+  max-width: 100%;
+}
+.columnas-productos .col h4 {
+  font-family: "Vidaloka", serif;
+  margin-top: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */

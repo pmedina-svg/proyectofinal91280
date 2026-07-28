@@ -184,10 +184,55 @@ section.hero-slide{
     h2{
         font-family: $titulosSerif;
         font-size: $tamanoTitulo;
+        color: $colorVerdeoscuro;
     }
     button{
         font-size: $tamanoGeneral;
         @extend %boton-estructura;
         @include botones($colorCafe, $bgClaro);
+    }
+}
+
+.carousel-item .contenedor:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: stretch;
+    background: #FDFAF7;
+    background: linear-gradient(270deg, rgba(253, 250, 247, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    right: 0px;
+    top: 0;
+}
+
+section.productos{
+    padding: 40px 0px;
+    text-align: center;
+    h3{
+        font-size: $titulosFont;
+        font-weight: bolder;
+        color: $colorVerdeoscuro;
+        margin-bottom: 15px;
+    }
+    button{
+        font-size: $tamanoGeneral;
+        @extend %boton-estructura;
+        @include botones($colorCafe, $bgClaro);
+    }
+}
+
+
+.columnas-productos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    .col{
+        max-width: 25%;
+        img{
+            max-width: 100%;
+        }
+        h4{
+            font-family: $titulosSerif;
+            margin-top: 15px;
+        }
     }
 }
