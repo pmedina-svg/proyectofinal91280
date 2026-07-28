@@ -82,7 +82,7 @@ footer p {
   margin-bottom: 0;
 }
 footer h3 {
-  color: #B39359;
+  color: #FDFAF7;
   text-align: left;
   font-size: 1.4rem;
   font-family: "Outfit", sans-serif;
@@ -115,7 +115,7 @@ footer .pie p {
   font-weight: 500;
 }
 
-section.hero-slide {
+.hero-slide {
   background: #FDFAF7;
 }
 
@@ -278,6 +278,134 @@ aside .post .titlePost a.button-link {
   font-size: 0.8rem;
   text-decoration: none;
   color: #B39359;
+}
+
+.page-interior .hero-slide img {
+  max-height: 500px;
+}
+.page-interior section {
+  padding: 60px 0;
+}
+.page-interior .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  align-items: center;
+  gap: 50px;
+}
+.page-interior .contenedor span.destacado {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.page-interior .contenedor h3 {
+  font-family: "Vidaloka", serif;
+  font-size: 2.4rem;
+  color: #35362B;
+}
+.page-interior .contenedor p {
+  font-size: 0.9rem;
+}
+.page-interior .colpage {
+  max-width: 50%;
+  width: 100%;
+}
+
+.lineaTiempo {
+  background: #35362B;
+  color: #FDFAF7;
+}
+.lineaTiempo .contenedor {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1080px;
+}
+.lineaTiempo .contenedor h3 {
+  color: #FDFAF7;
+  max-width: 350px;
+}
+.lineaTiempo .contenedor h3 span {
+  color: #B39359;
+}
+.lineaTiempo .storytime {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+.lineaTiempo .storytime:before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  border: 1px dashed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.lineaTiempo .storytime .col {
+  z-index: 1;
+}
+.lineaTiempo .storytime i.bi {
+  font-size: 30px;
+  border: 2px solid;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  background: #35362B;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.lineaTiempo .storytime h4 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  color: #B39359;
+}
+
+.colorClaro {
+  background-color: #FDFAF7;
+}
+
+.reves .textoSlide {
+  right: 0;
+  text-align: center;
+}
+.reves .contenedor {
+  flex-direction: row-reverse;
+}
+.reves .contenedor:after {
+  display: none;
+}
+.reves .contenedor h4 {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+.reves .contenedor .accordion .accordion-button {
+  font-size: 0.9rem;
+}
+.reves .contenedor .accordion .accordion-button:not(.collapsed) {
+  background: #8C8A65;
+  color: #FDFAF7;
+}
+.reves .contenedor .accordion .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem #8C8A65;
+}
+
+.hero-slide .contenedor {
+  flex-direction: row;
+}
+
+section.lineaTiempo .contenedor {
+  flex-direction: column;
+}
+
+section .accordion-button {
+  padding: 15px 10px 15px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
