@@ -16,6 +16,7 @@ $bgClaro: #FDFAF7;
 $colorCafe: #B39359;
 $colorVerde: #8C8A65;
 $colorVerdeoscuro: #35362B;
+$base-path: "../images";
 
 //tipografías
 $titulosFont: "Outfit", sans-serif;
@@ -32,19 +33,20 @@ $tamanoSmall: 0.9rem;
 // Extend
 
 %boton-estructura {
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
 }
 
 //mixin
 
-@mixin botones($bgColor, $txtColor){
+@mixin botones($bgColor, $txtColor) {
     background: $bgColor;
     color: $txtColor;
+    text-decoration: none;
 }
 
 
@@ -94,22 +96,22 @@ header {
 
     }
 
-    .navbar-nav{
-         a{
+    .navbar-nav {
+        a {
             text-decoration: none;
-            color:$colorVerde;
+            color: $colorVerde;
             padding: 0 15px;
             font-weight: 500;
             font-family: $titulosFont;
 
-            &:hover{
+            &:hover {
                 color: $colorVerdeoscuro;
             }
 
         }
 
-        .active{
-                color: $colorVerdeoscuro;
+        .active {
+            color: $colorVerdeoscuro;
         }
     }
 }
@@ -140,7 +142,8 @@ footer {
         margin: 0;
         padding: 0;
         text-align: left;
-        li{
+
+        li {
             list-style-type: none;
         }
     }
@@ -172,7 +175,7 @@ footer {
     }
 }
 
-section.hero-slide{
+section.hero-slide {
     background: $bgClaro;
 }
 
@@ -181,12 +184,14 @@ section.hero-slide{
     top: 50%;
     transform: translateY(-50%);
     max-width: 35%;
-    h2{
+
+    h2 {
         font-family: $titulosSerif;
         font-size: $tamanoTitulo;
         color: $colorVerdeoscuro;
     }
-    button{
+
+    .button-link {
         font-size: $tamanoGeneral;
         @extend %boton-estructura;
         @include botones($colorCafe, $bgClaro);
@@ -204,16 +209,18 @@ section.hero-slide{
     top: 0;
 }
 
-section.productos{
+section.productos {
     padding: 40px 0px;
     text-align: center;
-    h3{
+
+    h3 {
         font-size: $titulosFont;
         font-weight: bolder;
         color: $colorVerdeoscuro;
         margin-bottom: 15px;
     }
-    button{
+
+    .button-link {
         font-size: $tamanoGeneral;
         @extend %boton-estructura;
         @include botones($colorCafe, $bgClaro);
@@ -224,15 +231,134 @@ section.productos{
 .columnas-productos {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 50px;
-    .col{
-        max-width: 25%;
-        img{
+
+    .col {
+        align-content: stretch;
+        flex: 0 0 calc(25% - 37.5px);
+        box-sizing: border-box;
+
+        img {
             max-width: 100%;
         }
-        h4{
+
+        h4 {
             font-family: $titulosSerif;
             margin-top: 15px;
+        }
+    }
+}
+
+
+section.hero-small {
+    background-image: url("#{$base-path}/fondo-hero.webp");
+    background-position: center;
+    padding: 40px 0;
+
+    h2 {
+        text-align: center;
+        font-family: $titulosSerif;
+        font-size: $tamanoTitulo;
+        color: $colorVerdeoscuro;
+    }
+
+    p {
+        text-align: center;
+        max-width: 620px;
+        margin: 0 auto;
+    }
+}
+
+section.page-blog {
+    padding: 80px 0;
+    background: $bgClaro;
+
+    .contenedor {
+        display: flex;
+
+        .blog {
+            max-width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        aside {
+            max-width: 20%;
+            width: 100%;
+        }
+    }
+}
+
+article {
+    align-content: stretch;
+    flex: 0 0 calc(34% - 37.5px);
+    box-sizing: border-box;
+    border: 1px solid $bgClaro;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+
+    img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: $tamanoGeneral;
+        padding: 0 15px;
+        font-weight: bolder;
+    }
+
+    p {
+        font-size: $tamanoSmall;
+        line-height: normal;
+        padding: 0 15px;
+    }
+
+    a.button-link {
+        font-size: $tamanoSmall;
+        @extend %boton-estructura;
+        @include botones($colorVerde, $bgClaro);
+        margin: 0 15px 15px;
+    }
+}
+
+aside {
+    h4{
+        font-family: $titulosSerif;
+    }
+
+    .post {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+
+        figure {
+            max-width: 80px;
+            height: 80px;
+            overflow: hidden;
+
+            img {
+                width: fit-content;
+                height: 100%;
+            }
+        }
+
+        .titlePost {
+            max-width: 65%;
+
+            h3 {
+                font-size: $tamanoSmall;
+            }
+
+            a.button-link {
+                font-size: .8rem;
+                text-decoration: none;
+                color: $colorCafe;
+            }
         }
     }
 }

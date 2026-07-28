@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-section.productos button, .textoSlide button {
+article a.button-link, section.productos .button-link, .textoSlide .button-link {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -130,10 +130,11 @@ section.hero-slide {
   font-size: 3.3rem;
   color: #35362B;
 }
-.textoSlide button {
+.textoSlide .button-link {
   font-size: 1rem;
   background: #B39359;
   color: #FDFAF7;
+  text-decoration: none;
 }
 
 .carousel-item .contenedor:after {
@@ -157,19 +158,23 @@ section.productos h3 {
   color: #35362B;
   margin-bottom: 15px;
 }
-section.productos button {
+section.productos .button-link {
   font-size: 1rem;
   background: #B39359;
   color: #FDFAF7;
+  text-decoration: none;
 }
 
 .columnas-productos {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
 }
 .columnas-productos .col {
-  max-width: 25%;
+  align-content: stretch;
+  flex: 0 0 calc(25% - 37.5px);
+  box-sizing: border-box;
 }
 .columnas-productos .col img {
   max-width: 100%;
@@ -177,6 +182,102 @@ section.productos button {
 .columnas-productos .col h4 {
   font-family: "Vidaloka", serif;
   margin-top: 15px;
+}
+
+section.hero-small {
+  background-image: url("../images/fondo-hero.webp");
+  background-position: center;
+  padding: 40px 0;
+}
+section.hero-small h2 {
+  text-align: center;
+  font-family: "Vidaloka", serif;
+  font-size: 3.3rem;
+  color: #35362B;
+}
+section.hero-small p {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+section.page-blog {
+  padding: 80px 0;
+  background: #FDFAF7;
+}
+section.page-blog .contenedor {
+  display: flex;
+}
+section.page-blog .contenedor .blog {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+section.page-blog .contenedor aside {
+  max-width: 20%;
+  width: 100%;
+}
+
+article {
+  align-content: stretch;
+  flex: 0 0 calc(34% - 37.5px);
+  box-sizing: border-box;
+  border: 1px solid #FDFAF7;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+}
+article img {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+article h3 {
+  font-size: 1rem;
+  padding: 0 15px;
+  font-weight: bolder;
+}
+article p {
+  font-size: 0.9rem;
+  line-height: normal;
+  padding: 0 15px;
+}
+article a.button-link {
+  font-size: 0.9rem;
+  background: #8C8A65;
+  color: #FDFAF7;
+  text-decoration: none;
+  margin: 0 15px 15px;
+}
+
+aside h4 {
+  font-family: "Vidaloka", serif;
+}
+aside .post {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+aside .post figure {
+  max-width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+aside .post figure img {
+  width: fit-content;
+  height: 100%;
+}
+aside .post .titlePost {
+  max-width: 65%;
+}
+aside .post .titlePost h3 {
+  font-size: 0.9rem;
+}
+aside .post .titlePost a.button-link {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #B39359;
 }
 
 /*# sourceMappingURL=style.css.map */
