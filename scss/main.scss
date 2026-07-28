@@ -16,7 +16,7 @@ $bgClaro: #FDFAF7;
 $colorCafe: #B39359;
 $colorVerde: #8C8A65;
 $colorVerdeoscuro: #35362B;
-$base-path: "../images";
+$base-path: "../assets";
 
 //tipografías
 $titulosFont: "Outfit", sans-serif;
@@ -241,6 +241,11 @@ section.productos {
 
         img {
             max-width: 100%;
+            transition: transform .5s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
         }
 
         h4 {
