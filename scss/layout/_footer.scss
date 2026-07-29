@@ -1,0 +1,60 @@
+@use '../utilities/variables' as *;
+
+footer {
+    background-color: $colorVerdeoscuro;
+    padding: $espaciadoSeccion 0;
+
+    img {
+        max-height: 80px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: $colorVerde;
+        font-size: $tamanoSmall;
+        margin-bottom: 0;
+    }
+
+    h3 {
+        color: $bgClaro;
+        text-align: left;
+        font-size: $tamanoh3;
+        font-family: $titulosFont;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+
+        li {
+            list-style-type: none;
+        }
+    }
+
+    a {
+        color: $colorVerde;
+        text-decoration: none;
+        font-size: $tamanoSmall;
+    }
+
+    .social {
+
+        i {
+            height: 30px;
+        }
+    }
+
+    .pie {
+        padding: 15px 0;
+        margin-top: 40px;
+        text-align: center;
+        background: $colorVerde;
+
+        p {
+            color: $colorVerdeoscuro;
+            font-size: $tamanoSmall;
+            font-weight: 500;
+        }
+    }
+}

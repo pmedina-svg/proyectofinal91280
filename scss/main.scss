@@ -3,139 +3,27 @@
 @use 'utilities/mixins';
 @use 'utilities/extends';
 
+// Estilos Base
 @use 'base/reset';
+@use 'base/typography';
+
+// Estilos Layout
+@use 'layout/header';
+@use 'layout/grid';
+@use 'layout/footer';
+@use 'layout/sidebar';
+
+// Estilos componentes
+//@use 'components/slide';
+//@use 'components/hero';
+//@use 'components/articulo';
+
 
 // Importar google fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Vidaloka&display=swap');
 // iconos boostrap
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
-
-
-body {
-    font-family: variables.$cuerpoFont;
-    font-size: 62.5%;
-}
-
-h1 {
-    font-weight: 900;
-    font-size: variables.$tamanoTitulo;
-    margin-bottom: 0;
-}
-
-h2 {
-    font-weight: 500;
-    font-size: variables.$tamanoSubtitulo;
-}
-
-p,
-li,
-a {
-    font-size: variables.$tamanoGeneral;
-}
-
-.contenedor {
-    max-width: 1280px;
-    margin: 0 auto;
-    position: relative;
-}
-
-
-header {
-
-    a.navbar-brand {
-        display: block;
-        position: relative;
-
-        img {
-            max-width: 215px;
-        }
-
-        span {
-            position: absolute;
-            text-indent: -9999px;
-        }
-
-    }
-
-    .navbar-nav {
-        a {
-            text-decoration: none;
-            color: variables.$colorVerde;
-            padding: 0 15px;
-            font-weight: 500;
-            font-family: variables.$titulosFont;
-
-            &:hover {
-                color: variables.$colorVerdeoscuro;
-            }
-
-        }
-
-        .active {
-            color: variables.$colorVerdeoscuro;
-        }
-    }
-}
-
-footer {
-    background-color: variables.$colorVerdeoscuro;
-    padding: variables.$espaciadoSeccion;
-
-    img {
-        max-height: 80px;
-        margin-bottom: 10px;
-    }
-
-    p {
-        color: variables.$colorVerde;
-        font-size: variables.$tamanoSmall;
-        margin-bottom: 0;
-    }
-
-    h3 {
-        color: variables.$bgClaro;
-        text-align: left;
-        font-size: variables.$tamanoh3;
-        font-family: variables.$titulosFont;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-        text-align: left;
-
-        li {
-            list-style-type: none;
-        }
-    }
-
-    a {
-        color: variables.$colorVerde;
-        text-decoration: none;
-        font-size: variables.$tamanoSmall;
-    }
-
-    .social {
-
-        i {
-            height: 30px;
-        }
-    }
-
-    .pie {
-        padding: 15px 0;
-        margin-top: 40px;
-        text-align: center;
-        background: variables.$colorVerde;
-
-        p {
-            color: variables.$colorVerdeoscuro;
-            font-size: variables.$tamanoSmall;
-            font-weight: 500;
-        }
-    }
-}
 
 .hero-slide {
     background: variables.$bgClaro;
@@ -157,6 +45,10 @@ footer {
         font-size: variables.$tamanoGeneral;
         @extend %boton-estructura;
         @include mixins.botones(variables.$colorCafe, variables.$bgClaro);
+        transition: background-color 0.5s ease;
+        &:hover{
+            background-color: variables.$colorVerde;
+        }
     }
 }
 
@@ -186,6 +78,10 @@ section.productos {
         font-size: variables.$tamanoGeneral;
         @extend %boton-estructura;
         @include mixins.botones(variables.$colorCafe, variables.$bgClaro);
+        transition: background-color 0.5s ease;
+        &:hover{
+            background-color: variables.$colorVerde;
+        }
     }
 }
 
@@ -212,6 +108,7 @@ section.productos {
 
         h4 {
             font-family: variables.$titulosSerif;
+            font-size: variables.$tamanoh4;
             margin-top: 15px;
         }
     }
@@ -221,7 +118,7 @@ section.productos {
 section.hero-small {
     background-image: url("#{variables.$base-path}/fondo-hero.webp");
     background-position: center;
-    padding: variables.$espaciadoSeccion;
+    padding: 80px 0;
 
     h2 {
         text-align: center;
@@ -289,46 +186,14 @@ article {
         @extend %boton-estructura;
         @include mixins.botones(variables.$colorVerde, variables.$bgClaro);
         margin: 0 15px 15px;
-    }
-}
-
-aside {
-    h4 {
-        font-family: variables.$titulosSerif;
-    }
-
-    .post {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-
-        figure {
-            max-width: 80px;
-            height: 80px;
-            overflow: hidden;
-
-            img {
-                width: fit-content;
-                height: 100%;
-            }
-        }
-
-        .titlePost {
-            max-width: 65%;
-
-            h3 {
-                font-size: variables.$tamanoSmall;
-            }
-
-            a.button-link {
-                font-size: .8rem;
-                text-decoration: none;
-                color: variables.$colorCafe;
-            }
+        transition: background-color 0.5s ease;
+        &:hover{
+            background-color: variables.$colorVerde;
         }
     }
 }
+
+
 
 //historia
 .page-interior {
@@ -350,6 +215,7 @@ aside {
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 10px;
+            font-size: variables.$tamanoSpan;
         }
 
         h3 {
@@ -427,6 +293,7 @@ aside {
             font-family: variables.$titulosFont;
             font-weight: 300;
             color: variables.$colorCafe;
+            font-size: variables.$tamanoh4;
         }
     }
 }
@@ -449,7 +316,7 @@ aside {
 
         h4{
             font-weight: 500;
-            font-size: variables.$tamanoGeneral;
+            font-size: variables.$tamanoh4;
             margin-bottom: 20px;
         }
 

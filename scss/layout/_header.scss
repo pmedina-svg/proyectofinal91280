@@ -1,0 +1,33 @@
+@use '../utilities/variables' as *;
+
+header {
+
+    a.navbar-brand {
+        display: block;
+        position: relative;
+
+        img {
+            max-width: 215px;
+        }
+
+    }
+
+    .navbar-nav {
+        a {
+            text-decoration: none;
+            color: $colorVerde;
+            padding: 0 15px;
+            font-weight: 500;
+            font-family: $titulosFont;
+
+            &:hover {
+                color: $colorVerdeoscuro;
+            }
+
+        }
+
+        .active {
+            color: $colorVerdeoscuro;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@use '../utilities/variables' as *;
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $cuerpoFont;
+    font-size: $tamanoGeneral;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: $tamanoTitulo;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: $tamanoSubtitulo;
+}
+
+p,
+li,
+a {
+    font-size: $tamanoGeneral;
+}

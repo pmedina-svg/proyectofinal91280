@@ -12,3 +12,15 @@
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin tablet{
+    @media (max-width: 1023px){
+        @content;
+    }
+}
+
+@mixin movil{
+    @media (max-width:767px){
+        @content;
+    }
+}
