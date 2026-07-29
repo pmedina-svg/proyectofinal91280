@@ -1,6 +1,9 @@
 @use '../utilities/variables' as *;
 
 aside {
+    max-width: 20%;
+    width: 100%;
+
     h4 {
         font-family: $titulosSerif;
         font-size: $tamanoh4;

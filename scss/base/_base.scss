@@ -1,0 +1,11 @@
+@use '../utilities/variables' as *;
+
+html {
+    font-size: 62.5%;
+}
+
+// Color fondo
+
+.colorClaro {
+    background-color: $bgClaro;
+}

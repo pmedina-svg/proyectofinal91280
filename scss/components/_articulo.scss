@@ -1,0 +1,59 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/placeholders' as *;
+
+
+section.page-blog {
+    padding: 80px 0;
+    background: $bgClaro;
+
+    .contenedor {
+        display: flex;
+
+        .blog {
+            max-width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+}
+
+article {
+    align-content: stretch;
+    flex: 0 0 calc(34% - 37.5px);
+    box-sizing: border-box;
+    border: 1px solid $bgClaro;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+
+    img {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        font-size: $tamanoh4;
+        padding: 0 15px;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: $tamanoSmall;
+        line-height: normal;
+        padding: 0 15px;
+    }
+
+    a.button-link {
+        font-size: $tamanoSmall;
+        @extend %boton-estructura;
+        @include botones($colorVerde, $bgClaro);
+        margin: 0 15px 15px;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: $colorVerde;
+        }
+    }
+}

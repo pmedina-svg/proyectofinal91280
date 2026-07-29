@@ -1,0 +1,42 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/placeholders' as *;
+
+.hero-slide {
+    background: $bgClaro;
+}
+
+.textoSlide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 35%;
+
+    h2 {
+        font-family: $titulosSerif;
+        font-size: $tamanoTitulo;
+        color: $colorVerdeoscuro;
+    }
+
+    .button-link {
+        font-size: $tamanoGeneral;
+        @extend %boton-estructura;
+        @include botones($colorCafe, $bgClaro);
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: $colorVerde;
+        }
+    }
+}
+
+.carousel-item .contenedor:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: stretch;
+    background: #FDFAF7;
+    background: linear-gradient(270deg, rgba(253, 250, 247, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    right: 0px;
+    top: 0;
+}

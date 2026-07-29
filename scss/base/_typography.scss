@@ -1,9 +1,5 @@
 @use '../utilities/variables' as *;
 
-html{
-    font-size: 62.5%;
-}
-
 body {
     font-family: $cuerpoFont;
     font-size: $tamanoGeneral;
@@ -18,6 +14,12 @@ h1 {
 h2 {
     font-weight: 500;
     font-size: $tamanoSubtitulo;
+}
+
+h3 {
+    font-family: $titulosSerif;
+    font-size: $tamanoSubtitulo;
+    color: $colorVerdeoscuro;
 }
 
 p,

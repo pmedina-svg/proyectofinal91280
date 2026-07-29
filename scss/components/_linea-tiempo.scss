@@ -1,0 +1,65 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.lineaTiempo {
+    background: $colorVerdeoscuro;
+    color: $bgClaro;
+
+    .contenedor {
+        flex-direction: column;
+        text-align: center;
+        max-width: 1080px;
+
+        h3 {
+            color: $bgClaro;
+            max-width: 350px;
+
+            span {
+                color: $colorCafe;
+            }
+        }
+
+    }
+
+    .storytime {
+        display: flex;
+        gap: 30px;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 2px;
+            border: 1px dashed;
+            top: 40px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .col {
+            z-index: 1;
+        }
+
+        i.bi {
+            font-size: 30px;
+            border: 2px solid;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            padding: 20px;
+            background: $colorVerdeoscuro;
+            @include flex(center, center);
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            font-family: $titulosFont;
+            font-weight: 300;
+            color: $colorCafe;
+            font-size: $tamanoh4;
+        }
+    }
+}

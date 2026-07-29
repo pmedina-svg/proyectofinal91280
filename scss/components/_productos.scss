@@ -1,0 +1,55 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+@use '../utilities/placeholders' as *;
+
+section.productos {
+    padding: $espaciadoSeccion;
+    text-align: center;
+
+    h3 {
+        font-size: $titulosFont;
+        font-weight: bolder;
+        color: $colorVerdeoscuro;
+        margin-bottom: 15px;
+    }
+
+    .button-link {
+        font-size: $tamanoGeneral;
+        @extend %boton-estructura;
+        @include botones($colorCafe, $bgClaro);
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: $colorVerde;
+        }
+    }
+}
+
+
+.columnas-productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .col {
+        align-content: stretch;
+        flex: 0 0 calc(25% - 37.5px);
+        box-sizing: border-box;
+
+        img {
+            max-width: 100%;
+            transition: transform .5s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        h4 {
+            font-family: $titulosSerif;
+            font-size: $tamanoh4;
+            margin-top: 15px;
+        }
+    }
+}

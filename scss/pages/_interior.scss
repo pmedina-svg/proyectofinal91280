@@ -1,0 +1,70 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+
+//historia y beneficios
+.page-interior {
+    .hero-slide {
+        img {
+            max-height: 500px;
+        }
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .contenedor {
+        @include flex(space-between, center);
+        gap: 50px;
+
+        span.destacado {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-size: $tamanoSpan;
+        }
+
+        p {
+            font-size: $tamanoSmall;
+        }
+    }
+
+    .colpage {
+        max-width: 50%;
+        width: 100%;
+    }
+}
+
+.reves {
+    .textoSlide {
+        right: 0;
+        text-align: center;
+    }
+
+    .contenedor {
+        flex-direction: row-reverse;
+
+        &:after {
+            display: none;
+        }
+
+        h4 {
+            font-weight: 500;
+            font-size: $tamanoh4;
+            margin-bottom: 20px;
+        }
+
+    }
+
+}
+
+.hero-slide .contenedor {
+    flex-direction: row;
+
+}
+
+section.lineaTiempo .contenedor {
+    flex-direction: column;
+
+}
