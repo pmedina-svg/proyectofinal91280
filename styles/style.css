@@ -70,7 +70,7 @@ header .navbar-nav .active {
 
 footer {
   background-color: #35362B;
-  padding: 40px 0 0;
+  padding: 40px 0;
 }
 footer img {
   max-height: 80px;
@@ -149,7 +149,7 @@ footer .pie p {
 }
 
 section.productos {
-  padding: 40px 0px;
+  padding: 40px 0;
   text-align: center;
 }
 section.productos h3 {
@@ -293,7 +293,6 @@ aside .post .titlePost a.button-link {
 .page-interior .contenedor {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
   align-items: center;
   gap: 50px;
 }
@@ -355,12 +354,12 @@ aside .post .titlePost a.button-link {
   border: 2px solid;
   width: 80px;
   height: 80px;
-  display: flex;
   margin: 0 auto;
   padding: 20px;
   background: #35362B;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
   border-radius: 50%;
   margin-bottom: 15px;
 }
@@ -390,6 +389,7 @@ aside .post .titlePost a.button-link {
   margin-bottom: 20px;
 }
 .reves .contenedor .accordion .accordion-button {
+  padding: 15px 10px 15px 20px;
   font-size: 0.9rem;
 }
 .reves .contenedor .accordion .accordion-button:not(.collapsed) {
@@ -406,10 +406,6 @@ aside .post .titlePost a.button-link {
 
 section.lineaTiempo .contenedor {
   flex-direction: column;
-}
-
-section .accordion-button {
-  padding: 15px 10px 15px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

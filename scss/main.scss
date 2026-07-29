@@ -30,6 +30,10 @@ $tamanoh3: 1.4rem;
 $tamanoGeneral: 1rem;
 $tamanoSmall: 0.9rem;
 
+// Espaciado
+
+$espaciadoSeccion: 40px 0;
+
 // Extend
 
 %boton-estructura {
@@ -49,6 +53,12 @@ $tamanoSmall: 0.9rem;
     text-decoration: none;
 }
 
+
+@mixin flex($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
 
 body {
     font-family: $cuerpoFont;
@@ -118,7 +128,7 @@ header {
 
 footer {
     background-color: $colorVerdeoscuro;
-    padding: 40px 0 0;
+    padding: $espaciadoSeccion;
 
     img {
         max-height: 80px;
@@ -210,7 +220,7 @@ footer {
 }
 
 section.productos {
-    padding: 40px 0px;
+    padding: $espaciadoSeccion;
     text-align: center;
 
     h3 {
@@ -259,7 +269,7 @@ section.productos {
 section.hero-small {
     background-image: url("#{$base-path}/fondo-hero.webp");
     background-position: center;
-    padding: 40px 0;
+    padding: $espaciadoSeccion;
 
     h2 {
         text-align: center;
@@ -381,10 +391,7 @@ aside {
     }
 
     .contenedor {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        align-items: center;
+        @include flex(space-between, center);
         gap: 50px;
 
         span.destacado {
@@ -456,12 +463,10 @@ aside {
             border: 2px solid;
             width: 80px;
             height: 80px;
-            display: flex;
             margin: 0 auto;
             padding: 20px;
             background: $colorVerdeoscuro;
-            align-items: center;
-            justify-content: center;
+            @include flex(center, center);
             border-radius: 50%;
             margin-bottom: 15px;
         }
@@ -498,6 +503,7 @@ aside {
 
         .accordion{
             .accordion-button{
+            padding: 15px 10px 15px 20px;
             font-size: $tamanoSmall;
             &:not(.collapsed){
                 background:$colorVerde;
@@ -521,10 +527,4 @@ aside {
     section.lineaTiempo .contenedor {
             flex-direction: column;
 
-    }
-
-    section{
-        .accordion-button{
-            padding: 15px 10px 15px 20px;
-        }
     }
