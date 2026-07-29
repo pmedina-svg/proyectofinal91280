@@ -1,0 +1,14 @@
+//mixin
+
+@mixin botones($bgColor, $txtColor) {
+    background: $bgColor;
+    color: $txtColor;
+    text-decoration: none;
+}
+
+
+@mixin flex($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
