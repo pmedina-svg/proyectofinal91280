@@ -1,8 +1,19 @@
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
 footer {
     background-color: $colorVerdeoscuro;
     padding: $espaciadoSeccion 0;
+
+    .row {
+            .col {
+                @include movil {
+                flex: none;
+                padding: 10px 0;
+                text-align: center;
+            }
+        }
+    }
 
     img {
         max-height: 80px;
@@ -20,6 +31,9 @@ footer {
         text-align: left;
         font-size: $tamanoh3;
         font-family: $titulosFont;
+        @include movil {
+            text-align: center;
+        }
     }
 
     ul {
@@ -29,6 +43,9 @@ footer {
 
         li {
             list-style-type: none;
+            @include movil {
+                text-align: center;
+            }
         }
     }
 
@@ -42,6 +59,12 @@ footer {
 
         i {
             height: 30px;
+        }
+
+        .d-flex{
+            @include movil {
+                justify-content: center;
+            }
         }
     }
 

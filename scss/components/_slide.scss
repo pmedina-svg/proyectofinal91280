@@ -4,18 +4,40 @@
 
 .hero-slide {
     background: $bgClaro;
+
+    .carousel-control-prev {
+        @include tablet {
+            display: none;
+        }
+    }
+
+
+    .carousel-control-next {
+        @include tablet {
+            display: none;
+        }
+    }
+
 }
 
 .textoSlide {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 35%;
+    max-width: 450px;
+
+    @include tablet {
+        max-width: 360px;
+    }
 
     h2 {
         font-family: $titulosSerif;
         font-size: $tamanoTitulo;
         color: $colorVerdeoscuro;
+
+        @include tablet {
+            font-size: $tamanoSubtitulo;
+        }
     }
 
     .button-link {
@@ -24,8 +46,35 @@
         @include botones($colorCafe, $bgClaro);
         transition: background-color 0.5s ease;
 
+        @include tablet {
+            font-size: $tamanoSmall;
+        }
+
         &:hover {
             background-color: $colorVerde;
+        }
+    }
+
+    @include movil {
+        position: relative;
+        top: 0;
+        transform: none;
+        margin: 30px auto 0;
+        text-align: center;
+    }
+}
+
+.carousel-item {
+    img {
+
+        max-height: 430px;
+
+        @include tablet {
+            height: 300px;
+        }
+
+        @include movil {
+            margin: 0 auto;
         }
     }
 }
@@ -39,4 +88,8 @@
     background: linear-gradient(270deg, rgba(253, 250, 247, 1) 0%, rgba(255, 255, 255, 0) 100%);
     right: 0px;
     top: 0;
+
+    @include movil {
+        display: none;
+    }
 }

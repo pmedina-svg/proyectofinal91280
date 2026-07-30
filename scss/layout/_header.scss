@@ -1,6 +1,10 @@
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
 
 header {
+
+    background: #fff;
 
     a.navbar-brand {
         display: block;
@@ -22,6 +26,10 @@ header {
 
             &:hover {
                 color: $colorVerdeoscuro;
+            }
+
+            @include tablet {
+                padding: 6px 0;
             }
 
         }

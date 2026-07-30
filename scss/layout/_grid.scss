@@ -1,7 +1,12 @@
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
 .contenedor {
     max-width: 1280px;
+    padding: 0 10px;
     margin: 0 auto;
     position: relative;
+    @include movil {
+        padding: 0 20px;
+    }
 }

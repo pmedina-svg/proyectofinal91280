@@ -12,6 +12,9 @@ section.hero-small {
         font-family: $titulosSerif;
         font-size: $tamanoTitulo;
         color: $colorVerdeoscuro;
+        @include tablet {
+            font-size: $tamanoSubtitulo;
+    }
     }
 
     p {

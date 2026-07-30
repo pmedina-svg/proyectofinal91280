@@ -10,11 +10,23 @@ section.page-blog {
     .contenedor {
         display: flex;
 
+        @include tablet {
+            flex-direction: column;
+        }
+
         .blog {
             max-width: 80%;
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
+
+            @include tablet {
+                max-width: 100%;
+            }
+
+            @include movil {
+                justify-content: center;
+            }
         }
     }
 }
@@ -56,5 +68,15 @@ article {
         &:hover {
             background-color: $colorVerde;
         }
+
+    }
+
+    @include tablet {
+        flex: 0 0 calc(50% - 25px);
+    }
+
+    @include movil {
+        flex: 0 0 calc(100%);
+        max-width: 480px;
     }
 }

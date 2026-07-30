@@ -1,8 +1,12 @@
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
 body {
     font-family: $cuerpoFont;
     font-size: $tamanoGeneral;
+    @include tablet {
+            font-size: $tamanoSmall;
+    }
 }
 
 h1 {
@@ -20,10 +24,16 @@ h3 {
     font-family: $titulosSerif;
     font-size: $tamanoSubtitulo;
     color: $colorVerdeoscuro;
+    @include tablet {
+            font-size: $tamanoh3;
+    }
 }
 
 p,
 li,
 a {
     font-size: $tamanoGeneral;
+    @include tablet {
+            font-size: $tamanoSmall;
+    }
 }

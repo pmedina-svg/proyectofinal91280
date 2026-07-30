@@ -7,6 +7,14 @@
     .hero-slide {
         img {
             max-height: 500px;
+
+            @include tablet {
+                height: 300px;
+            }
+
+            @include movil {
+                margin: 0 auto;
+            }
         }
     }
 
@@ -28,18 +36,35 @@
         p {
             font-size: $tamanoSmall;
         }
+
+        @include movil {
+            flex-direction: column;
+        }
     }
 
     .colpage {
         max-width: 50%;
         width: 100%;
+
+        img {
+            max-width: 100%;
+            display: block;
+
+            @include movil {
+                margin: 0 auto;
+            }
+        }
+
+        @include movil {
+            max-width: 100%;
+        }
     }
 }
 
 .reves {
     .textoSlide {
         right: 0;
-        text-align: center;
+        text-align: center;       
     }
 
     .contenedor {
@@ -55,12 +80,20 @@
             margin-bottom: 20px;
         }
 
+        @include movil {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
     }
 
 }
 
 .hero-slide .contenedor {
     flex-direction: row;
+    @include movil {
+        flex-direction: column;
+    }
 
 }
 
