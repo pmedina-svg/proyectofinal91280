@@ -302,19 +302,20 @@ section.productos .button-link:hover {
   flex-wrap: wrap;
   gap: 50px;
 }
-.columnas-productos .col {
+.columnas-productos article {
   align-content: stretch;
   flex: 0 0 calc(25% - 37.5px);
   box-sizing: border-box;
+  border: none;
 }
-.columnas-productos .col img {
+.columnas-productos article img {
   max-width: 100%;
   transition: transform 0.5s;
 }
-.columnas-productos .col img:hover {
+.columnas-productos article img:hover {
   transform: scale(1.1);
 }
-.columnas-productos .col h4 {
+.columnas-productos article h4 {
   font-family: "Vidaloka", serif;
   font-size: 1.8rem;
   margin-top: 15px;

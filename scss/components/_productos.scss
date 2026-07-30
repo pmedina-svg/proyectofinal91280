@@ -32,10 +32,11 @@ section.productos {
     flex-wrap: wrap;
     gap: 50px;
 
-    .col {
+    article {
         align-content: stretch;
         flex: 0 0 calc(25% - 37.5px);
         box-sizing: border-box;
+        border: none;
 
         img {
             max-width: 100%;
