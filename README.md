@@ -4,7 +4,7 @@ Sitio web dedicado al mundo del kéfir, creado para informar sobre su historia, 
 
 ## Ver proyecto
 
-Puedes visitar la versión online del proyecto a través de #.
+Puedes visitar la versión online del proyecto a través de [https://proyectofinal91280.vercel.app/].
 
 ## Sobre el proyecto
 
