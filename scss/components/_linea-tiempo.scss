@@ -41,7 +41,7 @@
             }
         }
 
-        .col {
+        article {
             z-index: 1;
             @include tablet {
             flex: 0 0 30%;

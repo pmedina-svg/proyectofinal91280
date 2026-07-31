@@ -74,9 +74,11 @@
             display: none;
         }
 
-        h4 {
+        h3.beneficios {
             font-weight: 500;
             font-size: $tamanoh4;
+            font-family: $cuerpoFont;
+            color: $colorVerdeoscuro;
             margin-bottom: 20px;
         }
 

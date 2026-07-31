@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Vidaloka&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-section.productos .button-link, article a.button-link, .textoSlide .button-link {
+section.productos .button-link, .blog article a.button-link, .textoSlide .button-link {
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -197,10 +197,15 @@ aside {
     border-radius: 20px;
   }
 }
-aside h4 {
+aside h3 {
   font-family: "Vidaloka", serif;
   font-size: 1.8rem;
   margin-bottom: 20px;
+}
+aside h3 {
+  font-size: 1.8rem;
+  padding: 0 15px;
+  font-weight: 500;
 }
 aside .last-post {
   display: flex;
@@ -229,7 +234,8 @@ aside .post figure img {
 aside .post .titlePost {
   max-width: 65%;
 }
-aside .post .titlePost h3 {
+aside .post .titlePost h4 {
+  font-family: "Vidaloka", serif;
   font-size: 1.4rem;
   margin: 0;
 }
@@ -380,7 +386,7 @@ section.page-blog .contenedor .blog {
   }
 }
 
-article {
+.blog article {
   align-content: stretch;
   flex: 0 0 calc(34% - 37.5px);
   box-sizing: border-box;
@@ -388,40 +394,45 @@ article {
   border-radius: 15px;
   overflow: hidden;
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-article img {
+.blog article img {
   max-width: 100%;
   margin-bottom: 15px;
 }
-article h3 {
+.blog article h3 {
   font-size: 1.8rem;
   padding: 0 15px;
   font-weight: 500;
 }
-article p {
+.blog article p {
   font-size: 1.4rem;
   line-height: 1.9rem;
   margin-bottom: 15px;
   padding: 0 15px;
 }
-article a.button-link {
+.blog article a.button-link {
   font-size: 1.4rem;
-  background: #8C8A65;
-  color: #FDFAF7;
+  background: #FDFAF7;
+  color: #8C8A65;
   text-decoration: none;
   margin: 0 15px 15px;
   transition: background-color 0.5s ease;
+  text-align: center;
 }
-article a.button-link:hover {
+.blog article a.button-link:hover {
+  color: #FDFAF7;
   background-color: #8C8A65;
 }
 @media (max-width: 1023px) {
-  article {
+  .blog article {
     flex: 0 0 calc(50% - 25px);
   }
 }
 @media (max-width: 767px) {
-  article {
+  .blog article {
     flex: 0 0 100%;
     max-width: 480px;
   }
@@ -521,16 +532,16 @@ section.productos .button-link:hover {
     display: none;
   }
 }
-.lineaTiempo .storytime .col {
+.lineaTiempo .storytime article {
   z-index: 1;
 }
 @media (max-width: 1023px) {
-  .lineaTiempo .storytime .col {
+  .lineaTiempo .storytime article {
     flex: 0 0 30%;
   }
 }
 @media (max-width: 767px) {
-  .lineaTiempo .storytime .col {
+  .lineaTiempo .storytime article {
     flex: 0 0 40%;
   }
 }
@@ -639,9 +650,11 @@ section.productos .button-link:hover {
 .reves .contenedor:after {
   display: none;
 }
-.reves .contenedor h4 {
+.reves .contenedor h3.beneficios {
   font-weight: 500;
   font-size: 1.8rem;
+  font-family: "Inter", sans-serif;
+  color: #35362B;
   margin-bottom: 20px;
 }
 @media (max-width: 767px) {
